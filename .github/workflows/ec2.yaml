@@ -16,7 +16,5 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1 # Replace with your desired AWS region
-     - name: Run terraform plan
-       run: terraform plan
-     - name: Run apply
-       run: terraform apply -auto-approve
+     - name: Run destroy
+       run: terraform destroy -auto-approve
